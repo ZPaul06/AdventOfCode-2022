@@ -1,12 +1,12 @@
 with open("input.txt", "r") as f:
     allElves = []
     currentElf = 0
-    for line in f.readlines():
-        if line.replace("\n", "") == "":
+    for line in f.read().splitlines():
+        if line == "":
             allElves.append(currentElf)
             currentElf = 0
         else:
-            currentElf += int(line.replace("\n", ""))
+            currentElf += int(line)
 
     print("Part 1:  ", max(allElves))
 

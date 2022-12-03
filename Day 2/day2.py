@@ -8,8 +8,8 @@ def valueOf(key):
 
 with open("input.txt", "r") as f:
     score = 0
-    for line in f.readlines():
-        challenge = line.strip().split(" ")
+    for line in f.read().splitlines():
+        challenge = line.split(" ")
         me = valueOf(challenge[1])
         opponent = valueOf(challenge[0])
         if me == opponent:
@@ -23,8 +23,8 @@ with open("input.txt", "r") as f:
 
 with open("input.txt", "r") as f:
     score = 0
-    for line in f.readlines():
-        challenge = line.strip().split(" ")
+    for line in f.read().splitlines():
+        challenge = line.split(" ")
         hint = challenge[1]
         opponent = valueOf(challenge[0])
         if hint == "X":
